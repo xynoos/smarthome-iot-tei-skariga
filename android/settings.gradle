@@ -1,4 +1,15 @@
 pluginManagement {
+  // Ensure included builds (expo gradle plugins) use the same Kotlin Gradle plugin
+  // This prevents compilation errors like "Unresolved reference 'extensions'" when
+  // included plugin projects are compiled with an incompatible Kotlin Gradle plugin.
+  resolutionStrategy {
+    eachPlugin { requested ->
+      // Force Kotlin Gradle plugin for any included build that asks for it
+      if (requested.id.id == 'org.jetbrains.kotlin.jvm' || requested.id.id == 'org.jetbrains.kotlin.kapt') {
+        useModule("org.jetbrains.kotlin:kotlin-gradle-plugin:2.1.20")
+      }
+    }
+  }
   def reactNativeGradlePlugin = new File(
     providers.exec {
       workingDir(rootDir)
