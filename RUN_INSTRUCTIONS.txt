@@ -1,0 +1,109 @@
+================================================================================
+  🚀 CARA MENJALANKAN SMARTHOME SKARIGA MOBILE APP
+================================================================================
+
+LANGKAH 1: PERSIAPAN
+--------------------
+1. Pastikan Anda sudah di folder SmartHomeSkarigaApp
+   cd /workspaces/smarthome-iot-tei-skariga/SmartHomeSkarigaApp
+
+2. Install dependencies (jika belum):
+   npm install
+
+
+LANGKAH 2: JALANKAN APLIKASI
+----------------------------
+
+UNTUK ANDROID:
+--------------
+1. Hubungkan Android device via USB ATAU jalankan Android Emulator
+
+2. Enable USB Debugging di Android device:
+   - Settings > About Phone > Tap "Build Number" 7 kali
+   - Settings > Developer Options > Enable USB Debugging
+
+3. Verifikasi device terdeteksi:
+   adb devices
+
+4. Jalankan aplikasi:
+   npm run android
+
+5. Aplikasi akan build dan install ke device/emulator
+
+
+UNTUK iOS (hanya di macOS):
+---------------------------
+1. Install pods:
+   cd ios
+   pod install
+   cd ..
+
+2. Jalankan aplikasi:
+   npm run ios
+
+
+LANGKAH 3: LOGIN
+----------------
+1. Buka aplikasi di device
+2. Login dengan email & password yang sama seperti di web
+3. Selamat! Anda sudah bisa menggunakan aplikasi
+
+
+FITUR YANG BISA DICOBA:
+-----------------------
+✅ Dashboard - Welcome screen
+✅ Control - Toggle 4 perangkat (lampu & stop kontak)
+✅ Voice Control - Kontrol dengan suara (bahasa Indonesia)
+✅ Monitor - Lihat status real-time semua perangkat
+
+
+NAVIGASI:
+---------
+- Tap icon hamburger (☰) di pojok kiri atas untuk buka menu
+- Pilih screen yang ingin dikunjungi
+- Logout dari Dashboard
+
+
+TROUBLESHOOTING:
+----------------
+
+Problem: "adb: command not found"
+Solution: Install Android Studio dan tambahkan adb ke PATH
+
+Problem: "Could not connect to development server"
+Solution: 
+  - Pastikan Metro bundler running (npm start)
+  - Shake device > Settings > Change Bundle Location
+  - Masukkan IP komputer Anda
+
+Problem: "Voice control tidak bekerja"
+Solution:
+  - Pastikan permission RECORD_AUDIO sudah granted
+  - Settings > Apps > SmartHome > Permissions > Microphone
+
+Problem: "MQTT tidak terkoneksi"
+Solution:
+  - Cek koneksi internet
+  - Pastikan broker running di wss://mqtt.tecnoverse.app:8081
+
+
+DOKUMENTASI LENGKAP:
+--------------------
+📖 README_APP.md - Dokumentasi lengkap aplikasi
+📖 QUICKSTART.md - Quick start guide
+📖 STRUCTURE.md - Struktur project
+📖 TESTING_CHECKLIST.md - Checklist untuk testing
+📖 DEPLOYMENT.md - Panduan deployment
+📖 COMPLETED.md - Summary fitur yang sudah selesai
+
+
+BUTUH BANTUAN?
+--------------
+1. Baca dokumentasi di atas
+2. Cek log error di terminal
+3. Hubungi team developer
+
+
+================================================================================
+  HAPPY CODING! 🎉
+================================================================================

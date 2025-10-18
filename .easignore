@@ -1,0 +1,40 @@
+# .easignore - controls which files are uploaded to EAS build service.
+# We intentionally include native projects (android/ ios/) so remote builds
+# can run the native build steps. Exclude large/node-local files and VCS state.
+
+# Keep the native projects
+!.gitignore
+!.easignore
+# Prevent uploading the local native Android/iOS projects so EAS will
+# perform an Expo prebuild. This avoids the repo's custom `android/`
+# configuration that caused Gradle/plugin resolution errors in remote
+# builders and is the fastest route to a working APK.
+android/
+ios/
+
+# Exclude node modules and local build artifacts
+node_modules
+.git
+.git/**
+.expo
+build
+dist
+*.log
+*.tmp
+*.cache
+
+# CocoaPods and Xcode derived data
+ios/Pods
+ios/Pods/**
+ios/Pods/**/.
+ios/build
+
+# Gradle caches/build output (but not android/ itself)
+**/build
+**/.gradle
+
+# Metro/packager
+.metro-cache
+
+# Bundles
+*.jsbundle

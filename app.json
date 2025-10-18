@@ -1,0 +1,50 @@
+{
+  "name": "SmartHomeSkarigaApp",
+  "displayName": "SmartHomeSkarigaApp",
+  "expo": {
+    "name": "SmartHome Skariga",
+    "slug": "smarthome-skariga",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "image": "./assets/icon.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.smarthomeskariga"
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/icon.png",
+        "backgroundColor": "#ffffff"
+      },
+      "package": "com.smarthomeskarigaapp",
+      "permissions": [
+        "RECORD_AUDIO",
+        "INTERNET",
+        "ACCESS_NETWORK_STATE",
+        "android.permission.RECORD_AUDIO"
+  ]
+      
+    },
+    "web": {
+      "favicon": "./assets/icon.png"
+    },
+    "plugins": [
+      "@react-native-voice/voice",
+      "expo-dev-client"
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "c805ab2e-b8c5-4e03-9d25-e3c67cfb9302"
+      }
+    }
+  }
+}
