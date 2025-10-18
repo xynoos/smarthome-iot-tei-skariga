@@ -76,8 +76,6 @@ yarn-error.log
 .env
 
 # Ignore local native folders to force EAS (CNG)
-/android
-/ios
 
 # Ignore Expo local state
 /.expo/
